@@ -20,6 +20,7 @@ function StockIn() {
     // Fetch existing inventory items for auto-suggest
     const fetchInventoryItems = async () => {
       try {
+         console.log("API URL being used:", API_URL);
         const response = await fetch(`${API_URL}/api/inventory`)
         const data = await response.json()
         if (data.success) {
